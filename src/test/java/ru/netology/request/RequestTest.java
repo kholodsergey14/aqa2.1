@@ -19,7 +19,7 @@ public class RequestTest {
     @Test
     @DisplayName("Should submit request")
     void shouldSubmitRequest() {
-        SelenideElement form = $("form.form");
+        SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("Сергей Холод");
         form.$("[data-test-id=phone] input").setValue("+79193333333");
         form.$(".checkbox__box").click();
@@ -31,7 +31,7 @@ public class RequestTest {
     @Test
     @DisplayName("Should return error if field name is empty")
     void shouldReturnErrorIfEmptyName() {
-        SelenideElement form = $("form.form");
+        SelenideElement form = $("form);
         form.$("[data-test-id=name] input").setValue("");
         form.$("[data-test-id=phone] input").setValue("+79193333333");
         form.$(".checkbox__box").click();
@@ -43,7 +43,7 @@ public class RequestTest {
     @Test
     @DisplayName("Should return error if name entered with english letters")
     void shouldReturnErrorIfNameIsInEnglish() {
-        SelenideElement form = $("form.form");
+        SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("Sergey Kholod");
         form.$("[data-test-id=phone] input").setValue("+79193333333");
         form.$(".checkbox__box").click();
@@ -55,7 +55,7 @@ public class RequestTest {
     @Test
     @DisplayName("Should return error if name entered with digits")
     void shouldReturnErrorIfNameWithDigits() {
-        SelenideElement form = $("form.form");
+        SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("Сергей Холод 2211");
         form.$("[data-test-id=phone] input").setValue("+79193333333");
         form.$(".checkbox__box").click();
@@ -67,7 +67,7 @@ public class RequestTest {
     @Test
     @DisplayName("Should return error if field phone is empty")
     void shouldReturnErrorIfEmptyPhone() {
-        SelenideElement form = $("form.form");
+        SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("Сергей Холод");
         form.$("[data-test-id=phone] input").setValue("");
         form.$(".checkbox__box").click();
@@ -80,7 +80,7 @@ public class RequestTest {
     @Test
     @DisplayName("Should return error if phone number is wrong")
     void shouldReturnErrorIfWrongPhone() {
-        SelenideElement form = $("form.form");
+        SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("Сергей Холод");
         form.$("[data-test-id=phone] input").setValue("+7919333");
         form.$(".checkbox__box").click();
@@ -92,7 +92,7 @@ public class RequestTest {
     @Test
     @DisplayName("Should return error if phone number is entered with russian letters")
     void shouldReturnErrorIfNameWithRussianLetters() {
-        SelenideElement form = $("form.form");
+        SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("Сергей Холод");
         form.$("[data-test-id=phone] input").setValue("чёрненький такой");
         form.$(".checkbox__box").click();
@@ -104,7 +104,7 @@ public class RequestTest {
     @Test
     @DisplayName("Should return error if phone number is entered with english letters")
     void shouldReturnErrorIfNameWithEnglishLetters() {
-        SelenideElement form = $("form.form");
+        SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("Сергей Холод");
         form.$("[data-test-id=phone] input").setValue("chernenkiy takoy");
         form.$(".checkbox__box").click();
@@ -116,7 +116,7 @@ public class RequestTest {
     @Test
     @DisplayName("Should return error if checkbox agreement is empty")
     void shouldReturnErrorIfNotClickedAgreement() {
-        SelenideElement form = $("form.form");
+        SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("Сергей Холод");
         form.$("[data-test-id=phone] input").setValue("+79193333333");
         form.$("button.button").click();
