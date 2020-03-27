@@ -30,7 +30,7 @@ public class RequestTest {
     @Test
     @DisplayName("Should return error if field name is empty")
     void shouldReturnErrorIfEmptyName() {
-        SelenideElement form = $("form);
+        SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("");
         form.$("[data-test-id=phone] input").setValue("+79193333333");
         form.$(".checkbox__box").click();
