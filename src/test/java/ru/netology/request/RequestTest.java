@@ -84,7 +84,7 @@ public class RequestTest {
         form.$("[data-test-id=phone] input").setValue("+7919333");
         form.$(".checkbox__box").click();
         form.$("button.button").click();
-        String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79193333333.";
+        String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.";
         $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText(expected));
     }
 
@@ -96,7 +96,7 @@ public class RequestTest {
         form.$("[data-test-id=phone] input").setValue("чёрненький такой");
         form.$(".checkbox__box").click();
         form.$("button.button").click();
-        String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79193333333.";
+        String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.";
         $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText(expected));
     }
 
@@ -108,7 +108,7 @@ public class RequestTest {
         form.$("[data-test-id=phone] input").setValue("chernenkiy takoy");
         form.$(".checkbox__box").click();
         form.$("button.button").click();
-        String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79193333333.";
+        String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.";
         $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText(expected));
     }
 
